@@ -1,0 +1,23 @@
+[
+{"id": 1, "name": "Mercedes 35 HP", "category": "Internal Combustion", "fueltype": "Gasoline", "year-invented": 1886, "pros": ["First practical car engine", "Simple design"], "cons": ["Low power", "Inefficient"]},
+{"id": 2, "name": "Ford Model T Engine", "category": "Internal Combustion", "fueltype": "Gasoline", "year-invented": 1908, "pros": ["Mass-produced", "Durable"], "cons": ["Low efficiency", "Heavy"]},
+{"id": 3, "name": "Rover 8 HP", "category": "Internal Combustion", "fueltype": "Gasoline", "year-invented": 1904, "pros": ["Compact design"], "cons": ["Limited power"]},
+{"id": 4, "name": "Fiat 501 Engine", "category": "Internal Combustion", "fueltype": "Gasoline", "year-invented": 1919, "pros": ["Reliable for its time"], "cons": ["Low speed"]},
+{"id": 5, "name": "Chevrolet Stovebolt Six", "category": "Internal Combustion", "fueltype": "Gasoline", "year-invented": 1929, "pros": ["Durable", "Affordable"], "cons": ["Moderate power"]},
+{"id": 6, "name": "Cadillac V8 Engine", "category": "Internal Combustion", "fueltype": "Gasoline", "year-invented": 1915, "pros": ["Smooth", "Powerful"], "cons": ["Heavy", "Expensive"]},
+{"id": 7, "name": "Duesenberg Straight-8", "category": "Internal Combustion", "fueltype": "Gasoline", "year-invented": 1921, "pros": ["High performance"], "cons": ["Complex", "Expensive"]},
+{"id": 8, "name": "BMW M10", "category": "Internal Combustion", "fueltype": "Gasoline", "year-invented": 1962, "pros": ["Reliable", "Tuning-friendly"], "cons": ["Low displacement"]},
+{"id": 9, "name": "Chevrolet Small-Block V8", "category": "Internal Combustion", "fueltype": "Gasoline", "year-invented": 1955, "pros": ["Versatile", "High performance"], "cons": ["Fuel-thirsty"]},
+{"id": 10, "name": "Mercedes M102", "category": "Internal Combustion", "fueltype": "Gasoline", "year-invented": 1980, "pros": ["Durable", "Smooth"], "cons": ["Moderate efficiency"]},
+{"id": 11, "name": "Honda CVCC", "category": "Internal Combustion", "fueltype": "Gasoline", "year-invented": 1972, "pros": ["Low emissions", "Reliable"], "cons": ["Limited power"]},
+{"id": 12, "name": "Toyota 4A-GE", "category": "Internal Combustion", "fueltype": "Gasoline", "year-invented": 1983, "pros": ["High revving", "Reliable"], "cons": ["Expensive to maintain"]},
+{"id": 13, "name": "Mazda Wankel Rotary", "category": "Internal Combustion", "fueltype": "Gasoline", "year-invented": 1967, "pros": ["Compact", "Smooth"], "cons": ["High fuel consumption", "Short lifespan"]},
+{"id": 14, "name": "Volkswagen EA827", "category": "Internal Combustion", "fueltype": "Gasoline", "year-invented": 1972, "pros": ["Reliable", "Efficient"], "cons": ["Low power"]},
+{"id": 15, "name": "Rover K-Series", "category": "Internal Combustion", "fueltype": "Gasoline", "year-invented": 1988, "pros": ["Lightweight", "Fuel-efficient"], "cons": ["Head gasket issues"]},
+{"id": 16, "name": "Mercedes OM617", "category": "Diesel", "fueltype": "Diesel", "year-invented": 1974, "pros": ["Extremely durable", "Fuel-efficient"], "cons": ["Heavy", "Slow acceleration"]},
+{"id": 17, "name": "BMW M57", "category": "Diesel", "fueltype": "Diesel", "year-invented": 1998, "pros": ["High torque", "Efficient"], "cons": ["Turbo lag"]},
+{"id": 18, "name": "Ford EcoBoost", "category": "Internal Combustion", "fueltype": "Gasoline", "year-invented": 2009, "pros": ["Turbocharged efficiency"], "cons": ["Maintenance cost"]},
+{"id": 19, "name": "Toyota Hybrid Synergy Drive", "category": "Hybrid", "fueltype": "Gasoline + Electric", "year-invented": 1997, "pros": ["Fuel-efficient", "Low emissions"], "cons": ["Expensive", "Battery replacement needed"]},
+{"id": 20, "name": "Honda IMA Hybrid", "category": "Hybrid", "fueltype": "Gasoline + Electric", "year-invented": 1999, "pros": ["Compact", "Efficient"], "cons": ["Low electric-only range"]}
+
+]

@@ -1,0 +1,162 @@
+[
+  {
+    "id": 1,
+    "name": "Bitcoin",
+    "symbol": "BTC",
+    "price_usd": 68000,
+    "market_cap_usd": 1340000000000,
+    "image": "https://assets.coingecko.com/coins/images/1/large/bitcoin.png"
+  },
+  {
+    "id": 2,
+    "name": "Ethereum",
+    "symbol": "ETH",
+    "price_usd": 3500,
+    "market_cap_usd": 420000000000,
+    "image": "https://assets.coingecko.com/coins/images/279/large/ethereum.png"
+  },
+  {
+    "id": 3,
+    "name": "Tether",
+    "symbol": "USDT",
+    "price_usd": 1,
+    "market_cap_usd": 96000000000,
+    "image": "https://assets.coingecko.com/coins/images/325/large/Tether.png"
+  },
+  {
+    "id": 4,
+    "name": "BNB",
+    "symbol": "BNB",
+    "price_usd": 580,
+    "market_cap_usd": 89000000000,
+    "image": "https://assets.coingecko.com/coins/images/825/large/binance-coin-logo.png"
+  },
+  {
+    "id": 5,
+    "name": "Solana",
+    "symbol": "SOL",
+    "price_usd": 180,
+    "market_cap_usd": 80000000000,
+    "image": "https://assets.coingecko.com/coins/images/4128/large/solana.png"
+  },
+  {
+    "id": 6,
+    "name": "XRP",
+    "symbol": "XRP",
+    "price_usd": 0.62,
+    "market_cap_usd": 34000000000,
+    "image": "https://assets.coingecko.com/coins/images/44/large/xrp-symbol-white-128.png"
+  },
+  {
+    "id": 7,
+    "name": "Dogecoin",
+    "symbol": "DOGE",
+    "price_usd": 0.15,
+    "market_cap_usd": 21000000000,
+    "image": "https://assets.coingecko.com/coins/images/5/large/dogecoin.png"
+  },
+  {
+    "id": 8,
+    "name": "Cardano",
+    "symbol": "ADA",
+    "price_usd": 0.48,
+    "market_cap_usd": 17000000000,
+    "image": "https://assets.coingecko.com/coins/images/975/large/cardano.png"
+  },
+  {
+    "id": 9,
+    "name": "Avalanche",
+    "symbol": "AVAX",
+    "price_usd": 42,
+    "market_cap_usd": 15000000000,
+    "image": "https://assets.coingecko.com/coins/images/12559/large/coin-round-red.png"
+  },
+  {
+    "id": 10,
+    "name": "Polkadot",
+    "symbol": "DOT",
+    "price_usd": 6.9,
+    "market_cap_usd": 9500000000,
+    "image": "https://assets.coingecko.com/coins/images/12171/large/polkadot.png"
+  },
+  {
+    "id": 11,
+    "name": "Litecoin",
+    "symbol": "LTC",
+    "price_usd": 82,
+    "market_cap_usd": 6100000000,
+    "image": "https://assets.coingecko.com/coins/images/2/large/litecoin.png"
+  },
+  {
+    "id": 12,
+    "name": "Chainlink",
+    "symbol": "LINK",
+    "price_usd": 14.5,
+    "market_cap_usd": 8300000000,
+    "image": "https://assets.coingecko.com/coins/images/877/large/chainlink-new-logo.png"
+  },
+  {
+    "id": 13,
+    "name": "Polygon",
+    "symbol": "MATIC",
+    "price_usd": 0.72,
+    "market_cap_usd": 6600000000,
+    "image": "https://assets.coingecko.com/coins/images/4713/large/polygon.png"
+  },
+  {
+    "id": 14,
+    "name": "Stellar",
+    "symbol": "XLM",
+    "price_usd": 0.13,
+    "market_cap_usd": 3600000000,
+    "image": "https://assets.coingecko.com/coins/images/100/large/Stellar_symbol_black_RGB.png"
+  },
+  {
+    "id": 15,
+    "name": "VeChain",
+    "symbol": "VET",
+    "price_usd": 0.031,
+    "market_cap_usd": 2200000000,
+    "image": "https://assets.coingecko.com/coins/images/1167/large/VET_Token_Icon.png"
+  },
+  {
+    "id": 16,
+    "name": "Filecoin",
+    "symbol": "FIL",
+    "price_usd": 4.1,
+    "market_cap_usd": 1900000000,
+    "image": "https://assets.coingecko.com/coins/images/12817/large/filecoin.png"
+  },
+  {
+    "id": 17,
+    "name": "Maker",
+    "symbol": "MKR",
+    "price_usd": 2900,
+    "market_cap_usd": 2600000000,
+    "image": "https://assets.coingecko.com/coins/images/1364/large/Mark_Maker.png"
+  },
+  {
+    "id": 18,
+    "name": "Uniswap",
+    "symbol": "UNI",
+    "price_usd": 6.2,
+    "market_cap_usd": 4500000000,
+    "image": "https://assets.coingecko.com/coins/images/12504/large/uniswap-uni.png"
+  },
+  {
+    "id": 19,
+    "name": "Aave",
+    "symbol": "AAVE",
+    "price_usd": 120,
+    "market_cap_usd": 1700000000,
+    "image": "https://assets.coingecko.com/coins/images/12645/large/AAVE.png"
+  },
+  {
+    "id": 20,
+    "name": "Monero",
+    "symbol": "XMR",
+    "price_usd": 160,
+    "market_cap_usd": 2900000000,
+    "image": "https://assets.coingecko.com/coins/images/69/large/monero_logo.png"
+  }
+]

@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-json.min.js"></script>
+
+  <title>API the funny one</title>
+</head>
+
+<body>
+  <div class="container">
+    <!-- Navigation bar start -->
+    <nav>
+      <ul>
+        <li><a href="#home"> Home</a> </li>
+        <li><a href="#about"> About</a> </li>
+        <li><a href="#test"> Test </a> </li>
+        <li><a href="#review"> Review</a> </li>
+      </ul>
+    </nav>
+
+    <img src="image/api banner.jpg" alt="" srcset="">
+
+    <!-- Navigation bar end -->
+    <!-- Home section start  -->
+     
+    <div class="intro">
+      <h1>Why API is the funny one ?</h1>
+      <p>The meaning of API is <b>Application Programming Interface.</b>
+        It’s mainly a frontend-based concept that helps us display data or other elements in a convenient and readable
+        way.
+
+        For example:
+        If we open any shopping app, we see a list of products with their images and prices.
+        If we open a music app, we see songs, artists, and playlists — all beautifully displayed.
+
+        The language used by most APIs is <b>JSON (JavaScript Object Notation)</b> — which, in its raw form, isn’t very
+        readable for humans. So, we <b>“parse” </b>or convert this data and present it on our public website using the
+        <b>fetch()</b>
+        method in JavaScript.
+
+        So… what’s the funny thing here?
+        It’s the moment of success when we finally see our data appear correctly on the screen — when the syntax is
+        clean,
+        the code works, and everything flows just as we wanted.
+
+        That happiness, that tiny victory — that’s the real funny part of APIs.
+        So let’s dive in deep and enjoy the fun of fetching!
+      </p>
+    </div>
+    
+
+    <!-- Home section end  -->
+    <!-- About Section start -->
+    <div id="about" class="about">
+      <h1>About</h1>
+      <p>There are several types of APIs, but in this project, we’re focusing mainly on <b>Public APIs and Private
+          APIs.</b>
+
+        <b>Public APIs</b> are open and available for everyone to use — just like the <b>Nobel Laureate API</b> we’ve
+        fetched here. They
+        help developers learn, experiment, and build amazing things using real-world data.
+
+        On the other hand, <b>Private APIs</b> are restricted — they’re mostly used inside an organization or app, where
+        access
+        is limited for security and privacy reasons.
+
+        To parse and display these data beautifully on screen, we’ve used JavaScript methods like fetch() along with
+        loops
+        such as forEach(). We also used <b>DOM manipulation</b> — creating new elements dynamically using
+        document.createElement(), connecting them with appendChild(), and targeting sections using
+        document.getElementById(). <br>
+
+        In total, this project works with three <b>APIs</b> — <br>
+        1️⃣ <b>One Public API</b> (Nobel Laureate Data) <br>
+        2️⃣ <b>Two Custom APIs</b> (locally created JSON data)
+      </p>
+    </div>
+
+    <!-- About Section end -->
+    <!-- start of test section -->
+    <div id="test" class="meaning">
+      <h1>1.What is a Custom Api</h1>
+      <p>A custom API is a self-created Application Programming Interface designed to share and manage data or features
+        specific to your own project. Unlike public APIs that provide predefined data from external sources, a custom
+        API
+        gives you complete control over the structure, content, and access of your data. It allows developers to
+        experiment, learn, and build personalized solutions while understanding how requests, responses, and data
+        parsing
+        work in real-world applications — making it ideal for practical learning and tailored functionality. <br><br>
+      </p>
+
+      <section id="custom-api">
+        <h2>How to create a Custom API</h2>
+        <p>Follow these simple steps to create and use your own Custom API</p>
+        <div class="code-block">
+          <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+          <pre><code class="language-json">
+[
+{
+     "id": 1,
+    "name": "Mercedes 35 HP", 
+   "category": "Internal Combustion",
+  "fueltype": "Gasoline""year-invented": 1886, 
+   "pros": ["First practical car engine", "Simple design"], 
+  "cons": ["Low power", "Inefficient"]
+},
+{
+   "id": 2"name": "Ford Model T Engine", 
+   "category": "Internal Combustion""fueltype": "Gasoline",
+  "year-invented": 1908', 
+   "pros": ["Affordable", "Mass-produced"], 
+   "cons": ["Low performance", "Heavy"]
+  
+}
+]
+        </code></pre>
+        </div>
+
+
+        <p>Save this file as:<code>engines.json</code></p>
+        <hr class="divider" />
+        <h2>Now how to show this data on your HTML page?</h2>
+        <p>Now follow these steps</p>
+        <div class="code-block">
+          <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+          <pre><code class="language-javascript">
+
+ fetch('engines.json')
+  .then(res => res.json())
+  .then(data => {
+   const container = document.getElementById('engines-container');
+
+  data.forEach(item => {
+     const card = document.createElement('div');
+     card.className = 'engine-card';
+     card.innerHTML = `
+<p>${item.name}</p>
+<p><strong>Category:</strong> ${item.category}</p>
+<p><strong>Fuel Type:</strong> ${item.fueltype}</p>
+      <p><strong>Year Invented:</strong> ${item['year-invented']}</p>
+`;
+     container.appendChild(card);
+   });
+  })
+  .catch(err => console.error('Error loading JSON:', err));
+        </code></pre>
+        </div>
+        <!-- elaboration of the code  -->
+        <h2>elaboration of the code</h2>
+        <div class="code-block">
+          <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+          <pre><code class="language-javascript">
+
+  fetch('engines.json')
+          </code></pre>
+
+        </div>
+        <p>This line requests the engines.json file from your local project directory.
+          It’s like saying: “Hey browser, go get me that data file!”
+          The fetch() function returns a Promise, meaning it will complete the request asynchronously — without
+          freezing the page.</p>
+        <div class="code-block">
+          <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+          <pre><code class="language-javascript">
+.then(res => res.json()) 
+          </code></pre>
+
+        </div>
+        <p>Once the fetch() request succeeds, it gives a response object (res).
+          But this isn’t raw data yet — it’s a Response stream.
+          Calling .json() converts that stream into actual JSON data (JavaScript Object Notation) that we can easily
+          work with.
+          This also returns a Promise.</p>
+        <div class="code-block">
+          <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+          <pre><code class="language-javascript">
+  .then(data => {
+    const container = document.getElementById('engines-container');
+          </code></pre>
+
+        </div>
+        <p>Here, the parsed JSON data (our array of objects) is passed as data.
+          We also grab the HTML element with the ID engines-container — that’s where we’ll display our data dynamically.
+          So this connects backend (data) with frontend (UI).</p>
+        <div class="code-block">
+          <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+          <pre><code class="language-javascript">
+    data.forEach(item => {
+    const card = document.createElement('div');
+    card.className = 'engine-card';
+          </code></pre>
+
+        </div>
+        <p>We loop through every item (each engine) in the JSON array.
+          For each item, we create a new
+        <div> element dynamically using JavaScript — this will hold one engine’s
+          details.
+          We give it a CSS class engine-card to style it later.</p>
+
+          <div class="code-block">
+            <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            <pre><code class="language-javascript">
+    card.innerHTML = `
+    <p>${item.name}</p>
+    <p><strong>Category:</strong> ${item.category}</p>
+    <p><strong>Fuel Type:</strong> ${item.fueltype}</p>
+    <p><strong>Year Invented:</strong> ${item['year-invented']}</p>
+   `;
+          </code></pre>
+
+          </div>
+          <p>This sets the HTML content inside each card.
+            The template literals (`...`) let us directly insert variables with ${...} — super clean syntax!
+            We use bracket notation item['year-invented'] because the property name has a hyphen, which can’t be
+            accessed
+            with dot notation.</p>
+
+          <div class="code-block">
+            <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            <pre><code class="language-javascript">
+    container.appendChild(card);
+    });
+  })
+         </code></pre>
+          </div>
+          <p>After creating and filling each card, we attach it to the main container on the web page.
+            This way, your page builds itself dynamically from JSON data — like a small API-driven frontend app.</p>
+          <div class="code-block">
+            <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            <pre><code class="language-javascript">
+   .catch(err => console.error('Error loading JSON:', err));
+          </code></pre>
+          </div>
+          <p>If there’s any error (like the file not found or JSON syntax error), it’s caught here.
+            We log it to the browser console so you can debug easily.</p>
+          <h2>And your final result will look like this</h2>
+      </section>
+    </div>
+    <!-- API call one start -->
+    <div class="api1">
+      <div id="engines-container"></div>
+    </div>
+    <!-- API call one end -->
+
+    <div class="meaning">
+      <h1>What is a custom API with external link?</h1>
+      <p>A custom API with an external link is a self-built data source where some information is stored separately
+        outside the main code. Instead of keeping everything inside JavaScript or HTML, the API connects to external
+        files or links such as JSON files, images, icons, documents, or even online resources. This approach keeps your
+        project clean, organized, and easier to update. Developers often use external links to store large data, media,
+        or reusable assets that can be fetched whenever needed. Custom APIs with external links create a flexible
+        structure, improve performance, and make real-world applications more scalable and professional. <br><br></p>
+
+      <section id="custom-api">
+        <h2>How to create this one?</h2>
+        <p>Below is a sample JSON structure where each object contains an external image URL.</p>
+        <div class="code-block">
+          <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+          <pre><code class="language-json">
+ [
+ {
+    "id": 1,
+    "name": "Bitcoin",
+    "symbol": "BTC",
+    "price_usd": 68000,
+    "market_cap_usd": 1340000000000,
+    "image": "https://assets.coingecko.com/coins/images/1/large/bitcoin.png"
+  },
+  {
+    "id": 2,
+    "name": "Ethereum",
+    "symbol": "ETH",
+    "price_usd": 3500,
+    "market_cap_usd": 420000000000,
+    "image": "https://assets.coingecko.com/coins/images/279/large/ethereum.png"
+  },
+  {
+    "id": 3,
+    "name": "Tether",
+    "symbol": "USDT",
+    "price_usd": 1,
+    "market_cap_usd": 96000000000,
+    "image": "https://assets.coingecko.com/coins/images/325/large/Tether.png"
+  }
+ ]
+          </code></pre>
+        </div>
+        <p>Now save this as: <code>coins.json</code></p>
+        <hr class="divider" />
+        <h2>Now it's time to show this data on your HTML page.</h2>
+        <p>Now follow these steps</p>
+        <div class="code-block">
+          <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+          <pre><code class="language-javascript">
+
+            fetch('coins.json')
+  .then(res => res.json())
+  .then(data => {
+    const container = document.getElementById('coin-container');
+
+    data.forEach(coin => {
+      const card = document.createElement('div');
+      card.classList = 'coin-card';
+      card.innerHTML = `
+        <img src="${coin.image}" alt="${coin.name}">
+        <p>${coin.name}</p>
+        <p><strong>Symbol:</strong> ${coin.symbol}</p>
+        <p><strong>Price (USD):</strong> ${coin.price_usd}</p>
+        <p><strong>Market cap (USD):</strong> ${coin.market_cap_usd}</p>
+        
+      `;
+      container.appendChild(card);
+    });
+  })
+  .catch(err => console.error('Error loading JSON:', err));
+
+  **NB: Before applying this create a div with ID as "coin-container"
+           </code></pre>
+        </div>
+        <h2>And your final result will look like this</h2>
+      </section>
+    </div>
+
+    <!-- API call two start  -->
+    <div class="api2">
+      <div id="coin-container"></div>
+    </div>
+    <!-- API call two end  -->
+    <div class="meaning">
+      <h1>2.What is Public API ?</h1>
+      <p>A public API is an Application Programming Interface that is openly available for anyone to use without special
+        permissions. Companies and developers release public APIs so others can access their data or services, such as
+        weather information, currency rates, movie details, or social media features. Public APIs usually come with
+        documentation that explains endpoints, usage limits, and authentication requirements. Some public APIs are
+        completely free, while others need an API key or have paid tiers. They allow developers to integrate external
+        data
+        into websites or apps easily, enabling faster development and richer user experiences. <br><br></p>
+
+
+      <section id="custom-api">
+        <h2>Let's see how to use it</h2>
+        <div class="code-block">
+          <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+          <pre><code class="language-javascript">
+
+      const apiurl = "https://api.nobelprize.org/2.1/laureates?sort=asc&limit=1000";
+      const tablebody = document.querySelector('#lauratetable tbody');
+
+      let data = [];
+      let currentindex = 0;
+      const limit = 20;
+
+      fetch(apiurl)
+       .then(res => res.json())
+       .then(json => {
+         data = json.laureates;
+              displaydata();
+            })
+
+      **NB 
+      The base API link is: https://api.nobelprize.org/2.1/laureates
+      sort=ase means sort the data in ascending order.
+      limit=1000 means give me up to 1000 results.
+
+            </code></pre>
+        </div>
+        <h2>Follow these steps to show this data on HTML page</h2>
+        <div class="code-block">
+          <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+          <pre><code class="language-javascript">
+
+  function displaydata() {
+  tablebody.innerHTML = "";
+  const nextset = data.slice(currentindex, currentindex + limit);
+  nextset.forEach(laureate => {
+    const firstPrize = laureate.nobelPrizes?.[0] || {};
+    const row = document.createElement('tr');
+    row.innerHTML = `
+  <td>${laureate.fullName?.en || "N/A"}</td>
+      <td>${laureate.gender || "N/A"}</td>
+      <td>${firstPrize.awardYear || "N/A"}</td>
+      <td>${firstPrize.motivation?.en || "N/A"}</td>
+  `;
+    tablebody.appendChild(row);
+  });
+  }
+  
+        </code></pre>
+        </div>
+        <h2>Elaboration of this code.</h2>
+        <div class="code-block">
+          <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+          <pre><code class="language-javascript">
+
+     fetch(apiurl)
+     .then(res => res.json())
+     .then(json => {
+       data = json.laureates;
+       displaydata();
+     })
+
+         </code></pre>
+        </div>
+        <p>fetch(apiurl) sends a request to the Nobel Prize API. <br>
+          .then(res => res.json()) converts the raw response into usable JSON. <br>
+          json.laureates contains the actual list of laureates, so we store it inside data. <br>
+          Finally, we call displaydata() to show the result on the page.</p>
+
+        <div class="code-block">
+          <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+          <pre><code class="language-javascript">
+
+   tablebody.innerHTML = "";
+
+            </code></pre>
+        </div>
+        <p>This ensures the table becomes empty before inserting new rows.</p>
+        <div class="code-block">
+          <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+          <pre><code class="language-javascript">
+
+   const nextset = data.slice(currentindex, currentindex + limit);
+
+            </code></pre>
+        </div>
+        <p>We do not display all laureates at once. <br>
+          slice() picks only the next batch (example → 10 items). <br>
+          This is the heart of your pagination logic.</p>
+
+        <div class="code-block">
+          <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+          <pre><code class="language-javascript">
+
+   nextset.forEach(laureate => {
+
+            </code></pre>
+        </div>
+        <p>This will create one table row for each laureate.</p>
+        <div class="code-block">
+          <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+          <pre><code class="language-javascript">
+
+   const firstPrize = laureate.nobelPrizes?.[0] || {};
+
+            </code></pre>
+        </div>
+        <p>?. prevents errors if nobelPrizes doesn’t exist. <br>
+          If no prize exists, it returns {} so that fields become "N/A".</p>
+        <div class="code-block">
+          <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+          <pre><code class="language-javascript">
+
+    const row = document.createElement('tr');
+
+            </code></pre>
+        </div>
+        <p>This makes an empty row where we will put our table data.</p>
+        <div class="code-block">
+          <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+          <pre><code class="language-javascript">
+
+     row.innerHTML = `
+     <td>${laureate.fullName?.en || "N/A"}</td>
+     <td>${laureate.gender || "N/A"}</td>
+     <td>${firstPrize.awardYear || "N/A"}</td>
+     <td>${firstPrize.motivation?.en || "N/A"}</td>
+  `;
+
+            </code></pre>
+        </div>
+        <p>Here we display:
+
+          Full Name → laureate.fullName.en <br>
+          Gender → laureate.gender <br>
+          Award Year → firstPrize.awardYear <br>
+          Motivation → firstPrize.motivation.en <br>
+          All fields use || "N/A" to avoid blank values.</p>
+        <div class="code-block">
+          <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+          <pre><code class="language-javascript">
+
+     tablebody.appendChild(row);
+     });
+            </code></pre>
+        </div>
+        <p>This officially adds the row into the table on your webpage.</p>
+        <p>And your final result will look like this.</p>
+      </section>
+    </div>
+
+    <!-- API call three start -->
+
+    <div class="api3">
+      <h1>Nobel Laureates </h1>
+      <table id="lauratetable">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Category</th>
+            <th>Year</th>
+            <th>Motivation</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+
+
+      <button id="goback"> Go Previous</button>
+      <button id="loadMore">Load More</button>
+    </div>
+    <!-- API call three end -->
+    <!-- end of test section -->
+    <!-- start of review section -->
+     <div id="review">
+    <div class="review">
+      <h1>Review</h1>
+      <p>We value your feedback! Your review helps us understand how this project performs in real-world use and how we
+        can continue improving it. Whether you faced an issue, enjoyed a feature, or have a suggestion, we want to hear
+        from you. Please take a moment to drop your honest thoughts using the form below. Your responses are stored
+        securely in our system and help shape future updates. Thank you for supporting this project and helping it grow
+        through your valuable input!</p>
+      <form>
+        <input type="text" name="Name" placeholder="Your Name" required>
+        <input type="email" name="Email" placeholder="Your Email" required>
+        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+        <button type="submit">Submit</button>
+
+      </form>
+    </div>
+    </div>
+    <!-- end of review section -->
+    <!-- start of footer -->
+    <div class="footer">
+      <p>Built with patience, passion, and pure curiosity. ✨</p>
+      <p>© 2025 Ratul Ganguly — All rights reserved.</p>
+    </div>
+    <!-- end of footer -->
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
